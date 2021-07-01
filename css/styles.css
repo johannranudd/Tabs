@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+}
+
+body {
+    font-family: var(--ff-primary);
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* !class and ID */
+
+.section-center {
+    width: 90%;
+    margin: auto;
+    max-width: 1300px;
+}
+
+/* headline */
+
+.headline-cont {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.headline-cont p {
+    margin-top: 15px;
+}
+
+/* image-cont */
+
+.image-cont {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.image-cont img{
+    border-radius: 10px;
+}
+
+/* cards */
+
+.card-cont {
+    position: relative;
+}
+
+.card-cont aside {
+    position: absolute;
+    padding: 10px;
+}
+
+/* buttons */
+
+.btn-cont {
+    display: flex;
+}
+
+
+.tab-btn {
+   width: 100%;
+   height: 45px;
+   background: lightblue;
+   border: none;
+   cursor: pointer;
+}
+
+.tab-btn:first-child {
+    border-top-left-radius: 10px;
+}
+.tab-btn:last-child {
+    border-top-right-radius: 10px;
+}
+
+
+/* content */
+
+.card-cont aside {
+    display: none;
+}
+
+.card-cont aside > * {
+    padding: 10px 0;
+}
+
+.card-cont .active {
+    background: white;
+    display: block;
+}
