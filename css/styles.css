@@ -97,7 +97,10 @@ ul {
     padding: 10px 0;
 }
 
-.card-cont .active {
+.tab-btn.active {
     background: white;
+}
+
+.card-cont aside.active {
     display: block;
 }
