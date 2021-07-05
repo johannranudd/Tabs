@@ -59,7 +59,7 @@ ul {
     position: relative;
 }
 
-.card-cont aside {
+.content {
     position: absolute;
     padding: 10px;
 }
@@ -101,6 +101,6 @@ ul {
     background: white;
 }
 
-.card-cont aside.active {
+.content.active {
     display: block;
 }
