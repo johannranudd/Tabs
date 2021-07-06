@@ -174,30 +174,60 @@
 
 // !sdcvsdvsdc
 
+// const cardCont = document.querySelector(".card-cont");
+// const btns = document.querySelectorAll(".tab-btn");
+// const articles = document.querySelectorAll(".content");
+
+// cardCont.addEventListener("click", function (e) {
+//   const id = e.target.dataset.id;
+//   const clicked = e.target;
+//   if (id) {
+//     // remove active from other btns
+//     btns.forEach(function (btn) {
+
+//       // console.log(btn);
+//       btn.classList.remove('active');
+//     });
+//     clicked.classList.add('active');
+
+//     articles.forEach(function(art) {
+//       if (art.className.includes('active')) {
+//         art.classList.remove('active');
+//       }
+//       if (art.id == id) {
+//         art.classList.add('active');
+//         console.log(art);
+//       }
+//     })
+//     }
+    
+// });
+
+// !new test
+
 const cardCont = document.querySelector(".card-cont");
 const btns = document.querySelectorAll(".tab-btn");
 const articles = document.querySelectorAll(".content");
 
-cardCont.addEventListener("click", function (e) {
-  const id = e.target.dataset.id;
-  const clicked = e.target;
-  if (id) {
-    // remove active from other btns
-    btns.forEach(function (btn) {
-      // console.log(btn);
-      btn.classList.remove('active');
-    });
-    clicked.classList.add('active');
 
-    articles.forEach(function(art) {
-      if (art.className.includes('active')) {
-        art.classList.remove('active');
-      }
-      if (art.id == id) {
-        art.classList.add('active');
-        console.log(art);
+cardCont.addEventListener("click", function(e) {
+  const id = e.target.dataset.id;
+  
+  if (id) {
+    // button
+    btns.forEach(function(btn) {
+      btn.classList.remove('active');
+      if (btn.dataset.id == id) {
+        btn.classList.add('active');
       }
     })
-    }
+    //article
+    articles.forEach(function(art) {
+      art.classList.remove('active');
+      if (art.id == id) {
+        art.classList.add('active');
+      }
+    })
     
-});
+  }
+})
