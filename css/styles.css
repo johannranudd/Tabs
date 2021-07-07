@@ -82,6 +82,7 @@ ul {
    background: lightblue;
    border: none;
    cursor: pointer;
+   transition: .4s;
 }
 
 .tab-btn:first-child {
@@ -91,7 +92,9 @@ ul {
     border-top-right-radius: 10px;
 }
 
-
+.tab-btn:hover {
+    opacity: .7;
+}
 /* content */
 
 .content {
@@ -108,4 +111,21 @@ ul {
 
 .content.active {
     display: block;
+}
+
+@media (min-width: 900px) {
+    .card-cont {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-content: center;
+        gap: 2rem;
+    }
+    .image-cont {
+        margin: 0;
+    }
+    .image-cont img {
+        width: 100%;
+        max-width: 500px;
+    }
 }

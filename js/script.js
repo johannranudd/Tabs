@@ -172,7 +172,7 @@
 //   })
 // });
 
-// !sdcvsdvsdc
+// !sdcvsdvsdc (works)
 
 // const cardCont = document.querySelector(".card-cont");
 // const btns = document.querySelectorAll(".tab-btn");
@@ -203,31 +203,80 @@
     
 // });
 
-// !new test
+// !new test (works)
+
+// const cardCont = document.querySelector(".card-cont");
+// const btns = document.querySelectorAll(".tab-btn");
+// const articles = document.querySelectorAll(".content");
+
+
+// cardCont.addEventListener("click", function(e) {
+//   const id = e.target.dataset.id;
+  
+//   if (id) {
+//     // button
+//     btns.forEach(function(btn) {
+//       btn.classList.remove('active');
+//       if (btn.dataset.id == id) {
+//         btn.classList.add('active');
+//       }
+//     })
+//     //article
+//     articles.forEach(function(art) {
+//       art.classList.remove('active');
+//       if (art.id == id) {
+//         art.classList.add('active');
+//       }
+//     })
+    
+//   }
+// })
+
+// !new test (works)
+
+// const cardCont = document.querySelector(".card-cont");
+// const btns = document.querySelectorAll(".tab-btn");
+// const articles = document.querySelectorAll(".content");
+
+// cardCont.addEventListener("click", function(e) {
+//   const btnId = e.target.dataset.id;
+//   if (btnId) {
+//     // buttons
+//     btns.forEach(function (buttons) {
+//       buttons.classList.remove('active');
+//       if (buttons.dataset.id == btnId) {
+//         buttons.classList.add('active');
+//       }
+//     })
+//     // articles
+//     articles.forEach(function(art) {
+//       art.classList.remove('active');
+//       if (art.id == btnId) {
+//         art.classList.add('active');
+//       }
+//     })
+//   }
+// })
+
+// !test (works)
 
 const cardCont = document.querySelector(".card-cont");
 const btns = document.querySelectorAll(".tab-btn");
 const articles = document.querySelectorAll(".content");
 
 
-cardCont.addEventListener("click", function(e) {
-  const id = e.target.dataset.id;
-  
-  if (id) {
-    // button
-    btns.forEach(function(btn) {
-      btn.classList.remove('active');
-      if (btn.dataset.id == id) {
-        btn.classList.add('active');
-      }
+cardCont.addEventListener("click", function (e) {
+  const btnId = e.target.dataset.id;
+  if (btnId) {
+    btns.forEach(function (buttons) {
+      buttons.classList.remove('active');
+      e.target.classList.add('active');
     })
-    //article
     articles.forEach(function(art) {
       art.classList.remove('active');
-      if (art.id == id) {
+      if (art.id == btnId) {
         art.classList.add('active');
       }
     })
-    
   }
 })
