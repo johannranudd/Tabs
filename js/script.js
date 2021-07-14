@@ -282,10 +282,26 @@
 // })
 
 
-// !test
+// !test (works)
 
 const cardCont = document.querySelector(".card-cont");
 const btns = document.querySelectorAll(".tab-btn");
 const articles = document.querySelectorAll(".content");
 
-// sdfsdf
+cardCont.addEventListener("click", function (e) {
+  const clicked = e.target.dataset.id;
+  if (clicked) {
+    // buttons
+    btns.forEach(function(btn) {
+      btn.classList.remove('active');
+      e.target.classList.add('active');
+    })
+    // article
+    articles.forEach(function(art) {
+      art.classList.remove('active');
+      if (art.id == clicked) {
+        art.classList.add('active');
+      }
+    })
+  }
+});
