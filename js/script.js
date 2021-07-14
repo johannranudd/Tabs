@@ -260,23 +260,30 @@
 
 // !test (works)
 
+// const cardCont = document.querySelector(".card-cont");
+// const btns = document.querySelectorAll(".tab-btn");
+// const articles = document.querySelectorAll(".content");
+
+
+// cardCont.addEventListener("click", function (e) {
+//   const btnId = e.target.dataset.id;
+//   if (btnId) {
+//     btns.forEach(function (buttons) {
+//       buttons.classList.remove('active');
+//       e.target.classList.add('active');
+//     })
+//     articles.forEach(function(art) {
+//       art.classList.remove('active');
+//       if (art.id == btnId) {
+//         art.classList.add('active');
+//       }
+//     })
+//   }
+// })
+
+
+// !test
+
 const cardCont = document.querySelector(".card-cont");
 const btns = document.querySelectorAll(".tab-btn");
 const articles = document.querySelectorAll(".content");
-
-
-cardCont.addEventListener("click", function (e) {
-  const btnId = e.target.dataset.id;
-  if (btnId) {
-    btns.forEach(function (buttons) {
-      buttons.classList.remove('active');
-      e.target.classList.add('active');
-    })
-    articles.forEach(function(art) {
-      art.classList.remove('active');
-      if (art.id == btnId) {
-        art.classList.add('active');
-      }
-    })
-  }
-})
