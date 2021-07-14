@@ -287,3 +287,5 @@
 const cardCont = document.querySelector(".card-cont");
 const btns = document.querySelectorAll(".tab-btn");
 const articles = document.querySelectorAll(".content");
+
+// sdfsdf
